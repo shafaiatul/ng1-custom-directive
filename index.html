@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="customDirective">
+<head>
+
+	<title>Angular Custom Directive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Bootswatch CSS lib for paper theme-->
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body ng-cloak>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">Angular Custom Directive (Tabs)</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li ui-sref-active="active"><a ui-sref="customD1" >Custom Dir1</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+	<div class="container">
+        <div class="row">
+            <ui-view></ui-view>
+        </div>
+	</div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- <script src="https://kendo.cdn.telerik.com/2017.2.504/js/kendo.all.min.js"></script> -->
+
+    <!--Angualr Router cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+
+
+    <script src="app.js"></script>
+    <!--Controller-->
+    <script src="controllers/customD1.controller.js"></script>
+    <script src="directives/customD1.directive.js"></script>
+
+</body>
+</html>
